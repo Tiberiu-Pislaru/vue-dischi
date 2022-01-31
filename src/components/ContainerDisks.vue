@@ -3,7 +3,6 @@
         <div class="disk-body" v-for="(disk,index) in disks" :key="index">
            
             <disk-box :disk='disk'/>
-
             
         </div>
     </div>
@@ -28,13 +27,15 @@ export default {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
     justify-content: space-around;
+    
     
     .disk-body{
         text-align: center;
-        width: calc(100% / 4 - 20px);
+        width: calc(100% / 5 - 20px);
         margin-bottom: 15px;
+        padding: 15px;
+        background-color:#2E3A46;
     }
 }
 </style>

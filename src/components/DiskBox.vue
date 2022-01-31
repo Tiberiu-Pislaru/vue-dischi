@@ -1,17 +1,17 @@
 <template>
-    <div >
+    <div class="card" >
 
         <div class="img-box">
             <img :src="disk.poster" alt="">
         </div>
-        <div class="name">
-            {{disk.name}}
+        <div class="title">
+            {{disk.title}}
         </div>
-        <div class="origin">
-            {{disk.origin}}
+        <div class="author">
+            {{disk.author}}
         </div>
-        <div class="type">
-            {{disk.type}}
+        <div class="year">
+            {{disk.year}}
         </div>
         
 
@@ -27,40 +27,30 @@ export default {
 </script>
 
 <style lang="scss" >
-// .container-box {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // width: 950px; 
-    // margin: 0 auto;
-    // text-align: center;
 
-    
-// width: calc(100% / 4 - 20px);
-// margin-bottom: 15px;
+
+
 .img-box {
-    
-    // background: red;
-    overflow: hidden;
-    border-radius: 50%;
-    // margin-bottom: 10px;
-    // width: 100%;
-    
-
+    display: inline-block;
     img{
         width: 100%;
-        // object-fit: cover;
-    
+        height: 100%;
+        object-fit: fill;
     }
 }
-.name{
-    padding-bottom: 15px;
-    border-bottom: 2px solid grey;
-    margin-bottom:15px
+
+.title{
+    color: white;
+    font-weight:bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
-.type{
-    font-weight: bold;
+
+.author,
+.year{
+    color: #697980;
 }
+
     
-// }
 </style>

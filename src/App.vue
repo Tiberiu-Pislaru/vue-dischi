@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <container-logo/>
     <container-disks :disks='listDisks'/>
   </div>
 </template>
@@ -7,6 +8,7 @@
 <script>
 import axios from 'axios';
 import ContainerDisks from './components/ContainerDisks.vue'
+import ContainerLogo from './components/ContainerLogo.vue'
 
 export default {
   name: 'App',
@@ -17,10 +19,11 @@ export default {
   },
   components: {
     ContainerDisks,
+    ContainerLogo,
   },
   mounted() {
     axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((result)=>{
-      console.log(result.data)
+      
       this.listDisks=result.data.response;
     })
   }
@@ -28,12 +31,6 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './style/MainStyle.scss'
+
 </style>
