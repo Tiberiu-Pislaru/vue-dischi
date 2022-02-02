@@ -32,7 +32,7 @@ export default {
   methods:{
     alertTry(string){
       this.filteredDisks=this.listDisks.filter((disk)=>{
-        return disk.genre.toLowerCase().includes(string.toLowerCase())
+        return disk.genre.toLowerCase()===string.toLowerCase() || string.toLowerCase() ==='all'
       })
     }
   },

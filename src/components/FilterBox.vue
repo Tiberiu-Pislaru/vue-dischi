@@ -4,11 +4,11 @@
 
         <select name="cars" id="cars" v-model="selected" 
         @change="$emit('search',selected)">
-            <option value="">All</option>
-            <option value="Rock">Rock</option>
-            <option value="Pop">Pop</option>
-            <option value="Jazz">Jazz</option>
-            <option value="Metal">Metal</option>
+            <option value="all">All</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="metal">Metal</option>
         </select>
     </div>
 </template>
@@ -17,7 +17,7 @@
 export default {
     data(){
         return{
-            selected:''
+            selected:'all'
         }
     }
 }

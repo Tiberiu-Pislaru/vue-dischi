@@ -27,12 +27,13 @@ export default {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     
     
     .disk-body{
         text-align: center;
         width: calc(100% / 5 - 20px);
+        margin: 0 10px;
         margin-bottom: 15px;
         padding: 15px;
         background-color:#2E3A46;
